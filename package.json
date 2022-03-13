@@ -1,0 +1,29 @@
+{
+  "name": "wp-raudio",
+  "version": "1.0.0",
+  "description": "Webradioplayer for Wordpress",
+  "main": "assets/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf assets"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benignware-labs/wp-raudio.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/benignware-labs/wp-raudio/issues"
+  },
+  "homepage": "https://github.com/benignware-labs/wp-raudio",
+  "dependencies": {
+    "raudio": "^0.0.6"
+  },
+  "devDependencies": {
+  }
+}

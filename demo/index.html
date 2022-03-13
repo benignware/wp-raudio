@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Raudio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" integrity="sha512-G3jAqT2eM4MMkLMyQR5YBhvN5/Da3IG6kqgYqU9zlIH4+2a+GuMdLb5Kpxy6ItMdCfgaKlo2XFhI0dHtMJjoRw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/skins/native.css"/>
+  </head>
+  <body>
+    <h1>Raudio Demo</h1>
+    <div
+      class="raudio"
+      data-raudio
+    >
+      <div class="raudio-player">
+        <button
+          class="raudio-toggle"
+          data-toggle="raudio"
+        ></button>
+        <div class="raudio-current">
+          <div class="raudio-artist" data-raudio-current-track-artist></div>
+          <div class="raudio-title" data-raudio-current-track-title></div>
+        </div>
+      </div>
+      <div class="raudio-history" data-raudio>
+        <h2>History</h2>
+        <div>
+          <span
+            class="raudio-artist"
+            data-raudio-history-1-artist
+          ></span> - <span
+            class="raudio-title"
+            data-raudio-history-1-title
+          ></span>
+        </div>
+        <div>
+          <span
+            class="raudio-artist"
+            data-raudio-history-2-artist
+          ></span> - <span
+            class="raudio-title"
+            data-raudio-history-2-title
+          ></span>
+        </div>
+        <div>
+          <span
+            class="raudio-artist"
+            data-raudio-history-3-artist
+          ></span> - <span
+            class="raudio-title"
+            data-raudio-history-3-title
+          ></span>
+        </div>
+      </div>
+    </div>
+    <h2><a href="/demo/station1.html">Some other link</a></h1>
+    <audio
+      id="stream"
+      src="https://streams.radio.co/sd1bcd1376/listen#.mp3"
+      controls
+      data-raudio
+      data-turbolinks-permanent
+      hidden
+    />
+    <script src="/raudio.js" data-turbolinks-eval="false"></script>
+  </body>
+</html>

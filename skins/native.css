@@ -1,0 +1,153 @@
+:root {
+  --raudio-border-radius: 0;
+  --raudio-border-width: 1px;
+  --raudio-spacer: 8px;
+  --raudio-spacer-y: 6px;
+  --raudio-padding-x: 0;
+  --raudio-padding-y: 0;
+  --raudio-toggle-size: 32px;
+  --raudio-toggle-padding: 8px;
+  --raudio-toggle-border-width: 1px;
+  --raudio-font: 14px caption, sans-serif;
+}
+
+.raudio-player,
+.raudio-history img {
+  max-width: 100%;
+}
+
+.raudio-player {
+  font: var(--raudio-font);
+  border: var(--raudio-border-width) solid currentColor;
+  border-radius: var(--raudio-border-radius);
+  min-width: 0;
+  max-width: 100%;
+  width: 375px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.raudio-thumbnail {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+
+.raudio-thumbnail > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.raudio-thumbnail > img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.raudio-player.raudio-player-xs {
+  width: auto;
+  border: 0;
+}
+
+.raudio-body {
+  display: inline-grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--raudio-spacer);
+  align-items: center;
+  padding: var(--raudio-padding-y) var(--raudio-padding-x);
+}
+
+.raudio-body:not(:first-child) {
+  padding-top: var(--raudio-spacer-y);
+}
+
+.raudio-player-xs .raudio-body {
+  gap: 0;
+  padding: 0;
+}
+
+.raudio-player-xs .raudio-thumbnail,
+.raudio-player-sm .raudio-thumbnail {
+  display: none;
+}
+
+.raudio-player.raudio-player-block {
+  display: grid;
+  max-width: initial;
+}
+
+.raudio-player,
+.raudio-history * {
+  box-sizing: border-box;
+}
+
+.raudio-toggle {
+  appearance: none;
+  border: var(--raudio-border-width) solid currentColor;
+  border-radius: 50%;
+  font-size: 40px;
+  cursor: pointer;
+  width: var(--raudio-toggle-size);
+  height: var(--raudio-toggle-size);
+  padding: var(--raudio-toggle-padding);
+}
+
+.raudio-toggle:hover,
+.raudio-toggle:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+.raudio-toggle:before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  height: calc(var(--raudio-toggle-size) - var(--raudio-toggle-padding) * 2 - var(--raudio-toggle-border-width) * 2);
+  cursor: pointer;
+  transition: 100ms all ease;
+  border-style: solid;
+  border-color: currentColor;
+  border-left-width: calc(var(--raudio-toggle-size) - var(--raudio-toggle-padding) * 2 - var(--raudio-toggle-border-width) * 2);
+  border-right: 0;
+  border-top-width: calc((var(--raudio-toggle-size) - var(--raudio-toggle-padding) * 2 - var(--raudio-toggle-border-width) * 2) / 2);
+  border-top-color: transparent;
+  border-bottom-width: calc((var(--raudio-toggle-size) - var(--raudio-toggle-padding) * 2 - var(--raudio-toggle-border-width) * 2) / 2);
+  border-bottom-color: transparent;
+}
+
+.raudio-player.is-playing .raudio-toggle:before {
+  content: '';
+  display: block;
+  border-style: double;
+  border-width: 0 0 0 calc(var(--raudio-toggle-size) - var(--raudio-toggle-padding) * 2 - var(--raudio-toggle-border-width) * 2);
+}
+
+.raudio-current {
+  min-width: 0;
+}
+
+.raudio-player-xs .raudio-current {
+  display: none;
+}
+
+.raudio-artist {
+  font-weight: bold;
+}
+
+.raudio-artist,
+.raudio-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.raudio-history.raudio-history-sm .raudio-history-item {
+  margin-bottom: 1.3rem;
+  line-height: 1.1;
+}
+
