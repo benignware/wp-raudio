@@ -5,6 +5,7 @@
   --raudio-spacer-y: 6px;
   --raudio-padding-x: 0;
   --raudio-padding-y: 0;
+  --raudio-toggle-border-width: 1px;
   --raudio-toggle-size: 32px;
   --raudio-toggle-padding: 8px;
   --raudio-toggle-border-width: 1px;
@@ -87,7 +88,7 @@
 
 .raudio-toggle {
   appearance: none;
-  border: var(--raudio-border-width) solid currentColor;
+  border: var(--raudio-toggle-border-width) solid currentColor;
   border-radius: 50%;
   font-size: 40px;
   cursor: pointer;
