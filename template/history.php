@@ -2,7 +2,7 @@
   class="raudio raudio-history<?= isset($size) ? " raudio-history-$size" : '' ?>"
   data-raudio
 >
-  <?php foreach (range(1, $max_items) as $i): ?>
+  <?php foreach (range(1 + $offset, $max_items + $offset) as $i): ?>
     <p class="raudio-history-item">
       <<?= $atts['size'] === 'sm' ? 'small' : 'span' ?>
         class="raudio-artist"
