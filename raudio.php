@@ -4,7 +4,7 @@
  Plugin Name: Raudio
  Plugin URI: http://github.com/benignware-labs/wp-raudio
  Description: Webradioplayer for Wordpress
- Version: 1.0.0
+ Version: 1.0.0-beta.2
  Author: Rafael Nowrotek, Benignware
  Author URI: http://benignware.com
  License: UNLICENSED
